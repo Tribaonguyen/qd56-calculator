@@ -213,7 +213,7 @@ export default function Home() {
           <div style={{ background: 'var(--glass-bg)', borderRadius: 'var(--radius-md)', border: '1px solid var(--glass-border)', overflow: 'hidden' }}>
             <button 
               onClick={() => setShowApiConfig(!showApiConfig)}
-              style={{ width: '100%', padding: '1rem', background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--foreground)' }}
+              style={{ width: '100%', padding: '1rem', background: 'transparent', border: 'none', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', color: 'var(--text-main)' }}
             >
               <h4 style={{ margin: 0, color: 'var(--accent-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 🔑 Cấu Hình Nguồn AI
@@ -266,13 +266,13 @@ export default function Home() {
           <div style={{ display: 'flex', gap: '0.5rem', background: 'var(--glass-bg)', padding: '0.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--glass-border)' }}>
             <button 
               onClick={() => setInputMode('ocr')}
-              style={{ flex: 1, padding: '0.8rem', borderRadius: 'var(--radius-sm)', border: 'none', cursor: 'pointer', fontWeight: 600, background: inputMode === 'ocr' ? 'var(--accent-primary)' : 'transparent', color: inputMode === 'ocr' ? '#fff' : 'var(--foreground)', transition: 'all 0.3s' }}
+              style={{ flex: 1, padding: '0.8rem 0.4rem', borderRadius: 'var(--radius-sm)', border: 'none', cursor: 'pointer', fontWeight: 600, fontSize: 'clamp(0.75rem, 2vw, 0.95rem)', background: inputMode === 'ocr' ? 'var(--accent-primary)' : 'transparent', color: inputMode === 'ocr' ? '#fff' : 'var(--text-main)', transition: 'all 0.3s', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}
             >
               📸 Quét Ảnh Đại Khái 
             </button>
             <button 
               onClick={() => setInputMode('manual')}
-              style={{ flex: 1, padding: '0.8rem', borderRadius: 'var(--radius-sm)', border: 'none', cursor: 'pointer', fontWeight: 600, background: inputMode === 'manual' ? 'var(--accent-secondary)' : 'transparent', color: inputMode === 'manual' ? '#fff' : 'var(--foreground)', transition: 'all 0.3s' }}
+              style={{ flex: 1, padding: '0.8rem 0.4rem', borderRadius: 'var(--radius-sm)', border: 'none', cursor: 'pointer', fontWeight: 600, fontSize: 'clamp(0.75rem, 2vw, 0.95rem)', background: inputMode === 'manual' ? 'var(--accent-secondary)' : 'transparent', color: inputMode === 'manual' ? '#fff' : 'var(--text-main)', transition: 'all 0.3s', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}
             >
               ✍️ Tư Vấn Chuẩn QĐ 56
             </button>
@@ -445,7 +445,7 @@ export default function Home() {
               <h4 style={{ color: 'var(--success)', marginBottom: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1rem' }}>
                 <span>🧠</span> AI Đánh Giá Thực Tế:
               </h4>
-              <p style={{ margin: 0, fontSize: '0.85rem', lineHeight: '1.5', color: 'var(--foreground)' }}>
+              <p style={{ margin: 0, fontSize: '0.85rem', lineHeight: '1.5', color: 'var(--text-main)' }}>
                 {aiNote}
               </p>
             </div>
