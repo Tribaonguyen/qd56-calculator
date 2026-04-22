@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
 import fs from 'fs';
 import path from 'path';
+import os from 'os';
 
 export async function POST(request) {
   try {
@@ -45,12 +46,20 @@ export async function POST(request) {
         const creds = JSON.parse(vertexJsonString);
         project = creds.project_id;
         if (!project) throw new Error("JSON thiếu trường project_id");
+
+        // Fix: Khôi phục ký tự xuống dòng trong private_key bị hỏng khi qua localStorage/FormData
+        if (creds.private_key) {
+          creds.private_key = creds.private_key
+            .replace(/\\n/g, '\n')       // chuyển ký tự escaped \n thành dòng thật
+            .replace(/\r\n/g, '\n');     // chuẩn hóa CRLF → LF (Windows)
+        }
         
-        const tmpPath = path.join(process.cwd(), '.tmp-vertex.json');
-        fs.writeFileSync(tmpPath, vertexJsonString);
+        const tmpPath = path.join(os.tmpdir(), 'qd56-tmp-vertex.json');
+        fs.writeFileSync(tmpPath, JSON.stringify(creds)); // ghi lại JSON đã chuẩn hóa
         process.env.GOOGLE_APPLICATION_CREDENTIALS = tmpPath;
       } catch (err) {
-        return NextResponse.json({ error: 'Nội dung JSON không hợp lệ hoặc thiếu project_id!' }, { status: 400 });
+        console.error('Lỗi khi cấu hình Vertex:', err);
+        return NextResponse.json({ error: 'Lỗi nạp thư viện hoặc JSON không hợp lệ!' }, { status: 400 });
       }
 
       // Xóa GEMINI_API_KEY khỏi env tạm thời để tránh GenAI fallback nhầm sang API Key cho Vertex
