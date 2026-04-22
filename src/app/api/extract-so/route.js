@@ -115,11 +115,13 @@ Hãy phân tích quy mô xây dựng TỐI ĐA đối với phần "Diện tích
 
 Xuất kết quả dưới định dạng JSON đúng chuẩn sau:
 {
-  "area": <số_thực_tổng_diện_tích_thổ_cư>,
-  "density": <số_thực_mật_độ_xây_dựng_tối_đa_phần_trăm>,
-  "maxFloors": <số_nguyên_tầng_tối_đa_chưa_bao_gồm_lửng_mái_sân_thượng>,
-  "rearSetback": <số_thực_khoảng_lùi_sau_mét_nếu_có_quy_định_theo_diện_tích>,
-  "aiNote": "<Đoạn văn từ 5-7 câu tư vấn cực kỳ chi tiết: Phân tích vì sao có các chỉ tiêu (số tầng, lùi). Đặc biệt đánh giá rủi ro/lợi thế về 'Hình dạng lô đất' và 'Diện tích khác' mà khách nhập, và giải đáp 'Yêu cầu khác' nếu có.>"
+  "constructionArea": <số_thực_diện_tích_xây_dựng_tầng_trệt_m2>,
+  "density": {"value": "<Chuỗi_kết_quả_mật_độ_vd_70%>", "note": "<Chuỗi_giải_thích_công_thức_nội_suy_ngắn_gọn>"},
+  "floorStructure": {"value": "<Chuỗi_số_tầng_vd_5_Tầng>", "note": "<Chuỗi_liệt_kê_chi_tiết_trệt_lửng_lầu_tum_hầm>"},
+  "buildingHeight": {"value": "<Chuỗi_chiều_cao_tổng_vd_13.6m>", "note": "<Chuỗi_phép_tính_chi_tiết>"},
+  "balcony": {"value": "<Chuỗi_kích_thước_đua_ra_vd_0.9m>", "note": "<Chuỗi_điều_kiện_ban_công>"},
+  "rearSetback": {"value": "<Chuỗi_số_mét_lùi_sau_vd_1m>", "note": "<Chuỗi_giải_thích_ngắn_gọn>"},
+  "aiNote": "<Đoạn văn từ 5-7 câu tư vấn cực kỳ chi tiết: Đánh giá rủi ro/lợi thế về 'Hình dạng lô đất' và 'Diện tích khác' mà khách nhập, và giải đáp 'Yêu cầu khác' nếu có.>"
 }`;
       contentsArray = [prompt];
 
