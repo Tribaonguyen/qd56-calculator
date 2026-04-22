@@ -83,6 +83,17 @@ export default function Home() {
   };
 
   const submitManualConsulting = async () => {
+    if (!manualParams.residentialArea || !manualParams.roadWidth) {
+      alert('Vui lòng nhập tối thiểu Diện tích thổ cư và Lộ giới để tư vấn!');
+      return;
+    }
+    
+    if (apiType === 'vertex' && !vertexJson) {
+      alert('Vui lòng nhập nội dung file JSON của Service Account cho Vertex AI trong Cấu Hình Nguồn AI.');
+      setShowApiConfig(true);
+      return;
+    }
+
     setIsProcessing(true);
     const formData = new FormData();
     formData.append('apiType', apiType);
@@ -315,17 +326,17 @@ export default function Home() {
                 
                 <div className="form-group">
                   <label className="form-label">Chiều rộng mặt tiền (m)</label>
-                  <input type="number" className="form-input" name="width" value={params.width} onChange={handleInputChange} placeholder="VD: 5.0" step="0.1" />
+                  <input type="number" className="form-input" name="width" value={params.width} onChange={handleInputChange} onFocus={(e) => e.target.select()} placeholder="VD: 5.0" step="0.1" />
                 </div>
                 
                 <div className="form-group">
                   <label className="form-label">Chiều sâu lô đất (m)</label>
-                  <input type="number" className="form-input" name="depth" value={params.depth} onChange={handleInputChange} placeholder="VD: 20.0" step="0.1" />
+                  <input type="number" className="form-input" name="depth" value={params.depth} onChange={handleInputChange} onFocus={(e) => e.target.select()} placeholder="VD: 20.0" step="0.1" />
                 </div>
                 
                 <div className="form-group">
                   <label className="form-label">Lộ giới hẻm/đường mặt tiền (m)</label>
-                  <input type="number" className="form-input" name="roadWidth" value={params.roadWidth} onChange={handleInputChange} placeholder="VD: 12.0" step="0.1" />
+                  <input type="number" className="form-input" name="roadWidth" value={params.roadWidth} onChange={handleInputChange} onFocus={(e) => e.target.select()} placeholder="VD: 12.0" step="0.1" />
                 </div>
               </div>
             </>
@@ -343,18 +354,18 @@ export default function Home() {
               <div style={{ display: 'flex', gap: '1rem' }}>
                 <div className="form-group" style={{ flex: 1 }}>
                   <label className="form-label">2. Diện tích thổ cư (m²)</label>
-                  <input type="number" className="form-input" name="residentialArea" value={manualParams.residentialArea} onChange={handleManualChange} placeholder="VD: 100" />
+                  <input type="number" className="form-input" name="residentialArea" value={manualParams.residentialArea} onChange={handleManualChange} onFocus={(e) => e.target.select()} placeholder="VD: 100" />
                 </div>
                 <div className="form-group" style={{ flex: 1 }}>
                   <label className="form-label">3. Lộ giới (m)</label>
-                  <input type="number" className="form-input" name="roadWidth" value={manualParams.roadWidth} onChange={handleManualChange} placeholder="VD: 12" />
+                  <input type="number" className="form-input" name="roadWidth" value={manualParams.roadWidth} onChange={handleManualChange} onFocus={(e) => e.target.select()} placeholder="VD: 12" />
                 </div>
               </div>
 
               <div style={{ display: 'flex', gap: '1rem' }}>
                 <div className="form-group" style={{ flex: 1 }}>
                   <label className="form-label">4. Diện tích khác (m²)</label>
-                  <input type="number" className="form-input" name="otherArea" value={manualParams.otherArea} onChange={handleManualChange} placeholder="VD: 20" />
+                  <input type="number" className="form-input" name="otherArea" value={manualParams.otherArea} onChange={handleManualChange} onFocus={(e) => e.target.select()} placeholder="VD: 20" />
                 </div>
                 <div className="form-group" style={{ flex: 2 }}>
                   <label className="form-label">Nội dung diện tích khác</label>
