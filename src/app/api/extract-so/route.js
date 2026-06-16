@@ -113,6 +113,10 @@ KHÁCH HÀNG YÊU CẦU TƯ VẤN NHƯ SAU:
 
 Hãy phân tích quy mô xây dựng TỐI ĐA đối với phần "Diện tích thổ cư" dựa vào lộ giới, so sánh với Bảng quy định Mật độ, Khoảng lùi, Số tầng cao trong QĐ 56. Tuyệt đối không tự bịa ra thông số ngoài văn bản (chỉ lấy số cao nhất cho phép trong quy định tại mục đó). 
 
+LƯU Ý QUAN TRỌNG VỀ ĐẾM TẦNG VÀ CHIỀU CAO: 
+1. Tổng số tầng = Tầng Trệt + Tầng Lửng (nếu có) + Các Lầu + Tum che cầu thang (sân thượng). Ví dụ: "7 tầng" nghĩa là: Trệt, Lửng, Lầu 1, Lầu 2, Lầu 3, Lầu 4, Tum. TUYỆT ĐỐI KHÔNG liệt kê số lầu vọt lên quá giới hạn tổng tầng (Ví dụ 7 tầng thì không thể có "Lầu 5, Lầu 6").
+2. Chiều cao tổng (buildingHeight) = Chiều cao trệt (VD: 5.8m nếu có lửng, hoặc 3.8m nếu không) + (Số lượng Lầu x 3.4m) + Tum (3m). Chỉ nhân 3.4m với số LẦU, không nhân với Tổng Tầng.
+
 Xuất kết quả dưới định dạng JSON đúng chuẩn sau:
 {
   "constructionArea": <số_thực_diện_tích_xây_dựng_tầng_trệt_m2>,
