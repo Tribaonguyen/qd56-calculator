@@ -45,9 +45,9 @@ export function calculateMaxFloors(roadWidth) {
   if (roadWidth <= 0) return 0;
   if (roadWidth < 3.5) return 3;
   if (roadWidth >= 3.5 && roadWidth < 7) return 4;
-  if (roadWidth >= 7 && roadWidth <= 12) return 5;
-  if (roadWidth > 12 && roadWidth <= 20) return 6;
-  if (roadWidth > 20 && roadWidth <= 25) return 7;
+  if (roadWidth >= 7 && roadWidth < 12) return 5;
+  if (roadWidth >= 12 && roadWidth < 20) return 6;
+  if (roadWidth >= 20 && roadWidth < 25) return 7;
   return 8;
 }
 
