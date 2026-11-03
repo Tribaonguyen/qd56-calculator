@@ -4,24 +4,29 @@ TÓM TẮT QUY ĐỊNH XÂY DỰNG NHÀ Ở RIÊNG LẺ THEO QUYẾT ĐỊNH 56/
 - Diện tích xây dựng chỉ được phép tính trên phần "Diện tích đất ở (thổ cư)". 
 - Phần "Diện tích đất khác" (nông nghiệp, trồng cây...) KHÔNG ĐƯỢC PHÉP xây dựng công trình kiên cố, chỉ được làm sân, vườn.
 
-2. MẬT ĐỘ XÂY DỰNG TỐI ĐA (Chỉ tính trên diện tích đất thổ cư):
-- Lô đất ≤ 50m2: 100%
+2. MẬT ĐỘ XÂY DỰNG TỐI ĐA (Phụ lục 18 mục 3, Bảng 1 – chỉ tính trên diện tích đất thổ cư):
+- Lô đất < 50m2: 100%
 - Lô đất = 100m2: 90%
 - Lô đất = 200m2: 70%
 - Lô đất = 300m2: 60%
 - Lô đất = 500m2: 50%
-- Lô đất = 1000m2: 40%
-Công thức nội suy cho diện tích S nằm giữa S1 và S2:
+Diện tích nằm giữa hai mốc: nội suy tuyến tính.
+Công thức nội suy cho diện tích S nằm giữa S1 (cận dưới) và S2 (cận trên):
 Mật độ (%) = M1 + (S - S1) * (M2 - M1) / (S2 - S1)
+Ví dụ: S = 97,8m2 (giữa 50 và 100) → 100 + (97,8 - 50) * (90 - 100) / (100 - 50) = 90,44%.
+- Lô đất > 500m2: Bảng 1 KHÔNG quy định (không có mốc 1000m2 → 40%). Theo Phụ lục 18 mục 2.2, lô đất lớn hơn 500m2 do cơ quan quản lý kiến trúc quy hoạch có thẩm quyền xem xét và cung cấp thông tin quy hoạch cụ thể. KHÔNG tự tính mật độ; ghi rõ "cần xin thông tin quy hoạch / cơ quan có thẩm quyền xem xét".
 
-3. SỐ TẦNG VÀ CẤU TRÚC TẦNG (Phụ thuộc vào lộ giới L):
-Số tầng tiêu chuẩn (không gồm lửng, tum, hầm):
-- L < 3.5m: Tối đa 3 tầng. (Chỉ được: Trệt, Lầu 1, Lầu 2, Sân thượng/Mái). Không được làm lửng.
-- 3.5m ≤ L < 7m: Tối đa 4 tầng. (Được làm lửng. Cấu trúc: Trệt + Lửng, Lầu 1, Lầu 2, Lầu 3, Tum che thang + Sân thượng).
-- 7m ≤ L < 12m: Tối đa 5 tầng. (Trệt + Lửng, Lầu 1, 2, 3, 4, Tum che thang + Sân thượng).
-- 12m ≤ L < 20m: Tối đa 6 tầng. (Trệt + Lửng, Lầu 1 đến 5, Tum + Sân thượng).
-- 20m ≤ L < 25m: Tối đa 7 tầng.
-- L ≥ 25m: Tối đa 8 tầng.
+3. SỐ TẦNG (Phụ lục 18 mục 4.1, Bảng 2 – phụ thuộc lộ giới L):
+| Lộ giới L | Số tầng cơ bản | +1 nếu Quận trung tâm / TT cấp quận | +1 nếu trục đường TMDV | +1 nếu mặt tiền > 8,0m | Số tầng tối đa |
+| L ≥ 25m | 6 | – | – | – | 6 |
+| 16m ≤ L < 25m | 5 | +1 | +1 | +1 | 6 |
+| 6m ≤ L < 16m | 4 | +1 | 0 | +1 | 5 |
+| 3,5m ≤ L < 6m | 3 | +1 | 0 | +1 | 4 |
+| L < 3,5m | 3 | 0 | 0 | 0 | 3 |
+- Số tầng cơ bản: số tầng xây tại chỉ giới xây dựng.
+- Tầng cộng thêm: tối đa +1 tầng dù thỏa nhiều trường hợp; phải lùi vào 3,5m so với chỉ giới xây dựng.
+- Mặt tiền công trình < 4,0m: không áp dụng tầng cộng thêm.
+- Trục đường TMDV xác định tại Phụ lục 02. Số tầng không được vượt quy hoạch phân khu đã duyệt.
 * Hầm: Nếu khách hàng yêu cầu có hầm, phần hầm được cộng thêm vào kết cấu (ví dụ: Hầm, Trệt, Lửng...). Vị trí mép đường hầm phải cách ranh lộ giới tối thiểu 3m.
 
 4. ĐỘ VƯƠN BAN CÔNG (Phụ thuộc vào lộ giới L):
@@ -31,12 +36,16 @@ Số tầng tiêu chuẩn (không gồm lửng, tum, hầm):
 - L ≥ 20m: Vươn tối đa 1.4m.
 Lưu ý: Mặt dưới ban công phải cao hơn vỉa hè tối thiểu 3.5m. Ban công không được che chắn tạo thành phòng.
 
-5. CHIỀU CAO TÒA NHÀ (Tối đa):
-- Tầng trệt (có lửng): Cao tối đa 5.8m.
-- Tầng trệt (không lửng): Cao tối đa 3.8m.
-- Các tầng lầu điển hình: Cao 3.4m/tầng.
-- Tầng tum (mái che cầu thang): Cao 3.0m.
--> Tổng chiều cao = Chiều cao trệt + (Số lầu x 3.4m) + Tum (nếu có).
+5. CHIỀU CAO CÔNG TRÌNH (Phụ lục 18 mục 4.2, Bảng 3, đơn vị m):
+| Lộ giới L | Chiều cao tối đa tầng 1 (gồm lửng) | Cao độ chuẩn tại chỉ giới xây dựng | Đỉnh mái tối đa | Đỉnh mái tối đa nếu có cộng tầng |
+| L ≥ 25m | 7,0 | 25,0 (tại tầng 6) | 27,0 | – |
+| 16m ≤ L < 25m | 7,0 | 21,6 (tại tầng 5) | 23,6 | 27,0 |
+| 6m ≤ L < 16m | 5,8 | 17,0 (tại tầng 4) | 19,0 | 22,4 |
+| 3,5m ≤ L < 6m | – | 11,6 (tại tầng 3) | 13,6 | 15,6 |
+| L < 3,5m | – | – | 11,6 | – |
+- Không xây đủ số tầng tối đa: áp dụng cao độ chuẩn tại chỉ giới xây dựng tương ứng với số tầng xây ít hơn.
+- Chiều cao các tầng theo quy chuẩn, tiêu chuẩn hiện hành; không vượt quy hoạch phân khu đã duyệt.
+- Báo cáo chiều cao bằng các giới hạn trong bảng trên, không tự cộng chiều cao từng tầng theo số giả định.
 
 6. KHOẢNG LÙI SAU (Áp dụng cho chiều sâu lô đất D):
 - D < 9m: Lùi sau 0m.

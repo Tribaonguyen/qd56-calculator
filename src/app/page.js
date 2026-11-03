@@ -569,7 +569,11 @@ export default function Home() {
                 <div className="result-value" style={{ color: 'var(--accent-primary)' }}>
                   {results.density}
                 </div>
-                <div className="text-muted">%</div>
+                <div className="text-muted">
+                  {results.densityNeedsReview
+                    ? '% · Lô > 500m²: cần cơ quan có thẩm quyền xem xét (PL18 mục 2.2)'
+                    : '%'}
+                </div>
               </div>
 
               <div className="result-card">
@@ -577,7 +581,11 @@ export default function Home() {
                 <div className="result-value" style={{ color: 'var(--warning)' }}>
                   {results.maxFloors}
                 </div>
-                <div className="text-muted">tầng (chưa gồm lửng/mái)</div>
+                <div className="text-muted">
+                  tầng cơ bản (chưa gồm lửng/mái)
+                  {results.floorLimits?.bonusFloors > 0 &&
+                    ` · +1 tầng lùi 3,5m (${results.floorLimits.bonusReasons.join(', ')})`}
+                </div>
               </div>
 
               <div className="result-card">
